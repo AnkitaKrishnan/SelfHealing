@@ -33,10 +33,15 @@ kb_incident_project/
 ```sh
 python -m venv venv
 venv\Scripts\activate
+```
+#### On mac
+```sh
 python -m venv venv
 source venv/bin/activate
 python generate_embeddings.py
 python app.py
+```
 
+use curl to see output:
 curl -X POST http://127.0.0.1:5000/get_kb -H "Content-Type: application/json" -d '{"incident_number": "INC005", "description": "Users are unable to authenticate due to login issues"}'
 
